@@ -69,17 +69,30 @@ export function Footer() {
               Radno vrijeme
             </h4>
             <ul className="space-y-2 text-sm" style={{ color: "oklch(0.7 0 0)" }}>
-              <li className="flex justify-between">
-                <span>Pon – Pet</span>
-                <strong className="text-white">8:00 – 17:00</strong>
+              <li className="flex justify-between gap-3">
+                <span>Pon, Sri, Pet</span>
+                <strong className="text-white text-right">07:30 – 15:00</strong>
               </li>
-              <li className="flex justify-between">
+              <li className="text-xs italic" style={{ color: "oklch(0.55 0 0)" }}>
+                pauza 10:00 – 10:30
+              </li>
+              <li className="flex justify-between gap-3">
+                <span>Uto, Čet</span>
+                <strong className="text-white text-right">08:00 – 20:00</strong>
+              </li>
+              <li className="text-xs italic" style={{ color: "oklch(0.55 0 0)" }}>
+                pauza 17:00 – 17:30
+              </li>
+              <li className="flex justify-between gap-3">
                 <span>Subota</span>
-                <strong className="text-white">Po dogovoru</strong>
+                <strong className="text-white text-right">08:00 – 13:00</strong>
               </li>
-              <li className="flex justify-between">
+              <li className="text-xs italic" style={{ color: "oklch(0.55 0 0)" }}>
+                samo prva i treća subota u mjesecu
+              </li>
+              <li className="flex justify-between gap-3">
                 <span>Nedjelja</span>
-                <strong className="text-white">Zatvoreno</strong>
+                <strong className="text-white text-right">Zatvoreno</strong>
               </li>
             </ul>
           </div>
