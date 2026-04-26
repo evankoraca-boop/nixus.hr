@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Logo } from "./Logo";
 import { MapPin, Phone, Mail } from "lucide-react";
+import { openCookieSettings } from "./CookieConsent";
 
 export function Footer() {
   return (
@@ -85,11 +86,37 @@ export function Footer() {
         </div>
 
         <div
-          className="mt-12 pt-6 border-t flex flex-col sm:flex-row gap-3 justify-between text-xs"
+          className="mt-12 pt-6 border-t flex flex-col gap-4 text-xs"
           style={{ borderColor: "oklch(0.25 0 0)", color: "oklch(0.55 0 0)" }}
         >
-          <p>© {new Date().getFullYear()} NIXUS d.o.o. Sva prava pridržana.</p>
-          <p>Olge Ban 3, 52470 Umag · OIB: 00000000000</p>
+          <nav className="flex flex-wrap gap-x-5 gap-y-2" aria-label="Pravne informacije">
+            <Link
+              to="/politika-privatnosti"
+              className="transition-colors hover:text-white"
+              style={{ color: "oklch(0.7 0 0)" }}
+            >
+              Politika privatnosti
+            </Link>
+            <Link
+              to="/uvjeti-koristenja"
+              className="transition-colors hover:text-white"
+              style={{ color: "oklch(0.7 0 0)" }}
+            >
+              Uvjeti korištenja
+            </Link>
+            <button
+              type="button"
+              onClick={openCookieSettings}
+              className="transition-colors hover:text-white text-left"
+              style={{ color: "oklch(0.7 0 0)" }}
+            >
+              Postavke kolačića
+            </button>
+          </nav>
+          <div className="flex flex-col sm:flex-row gap-2 sm:justify-between">
+            <p>© {new Date().getFullYear()} NIXUS d.o.o. Sva prava pridržana.</p>
+            <p>Olge Ban 3, 52470 Umag · OIB: 00000000000</p>
+          </div>
         </div>
       </div>
     </footer>
