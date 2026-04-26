@@ -31,7 +31,7 @@ const faqs = [
   },
   {
     q: "Dolazite li na adresu klijenta?",
-    a: "Da, za poslovne korisnike i u opravdanim slučajevima dolazimo i na vašu lokaciju u Umagu i okolici. Kontaktirajte nas za dogovor.",
+    a: "Da, za poslovne korisnike i u opravdanim slučajevima dolazimo i na vašu lokaciju u Umagu i okolici. Izlazak na teren se naravno dodatno naplaćuje prema cjeniku. Kontaktirajte nas za dogovor.",
   },
   {
     q: "Nudite li IT podršku za tvrtke?",
