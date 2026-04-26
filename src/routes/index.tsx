@@ -11,7 +11,6 @@ import {
   Server,
   HardDrive,
   MessageSquare,
-  ShieldCheck,
   ArrowRight,
 } from "lucide-react";
 import heroPc from "@/assets/hero-pc.png";
@@ -92,26 +91,6 @@ function HomePage() {
                 height={960}
                 className="w-full rounded-3xl object-cover aspect-square scale-110 md:scale-125 origin-left"
               />
-              <div
-                className="absolute -bottom-5 left-5 md:left-8 flex items-center gap-3 bg-card rounded-2xl py-3 px-5 shadow-xl"
-                style={{ boxShadow: "0 12px 36px -12px oklch(0 0 0 / 0.18)" }}
-              >
-                <div
-                  className="w-10 h-10 rounded-lg flex items-center justify-center"
-                  style={{
-                    background: "var(--color-brand-soft)",
-                    color: "var(--color-brand)",
-                  }}
-                >
-                  <ShieldCheck size={18} />
-                </div>
-                <div>
-                  <strong className="block text-sm font-bold">20+ godina</strong>
-                  <span className="text-xs text-muted-foreground">
-                    iskustva u IT-u
-                  </span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
