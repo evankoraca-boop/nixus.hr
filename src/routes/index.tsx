@@ -238,12 +238,10 @@ function HomePage() {
           <div className="max-w-3xl mx-auto nx-card p-0 overflow-hidden">
             <div className="divide-y">
               {[
-                { name: "Informatički poslovi", unit: "sat", price: "30,40 €" },
-                { name: "Informatički poslovi + izlazak na teren", unit: "sat", price: "38,40 €" },
-                { name: "Instalacija periferije", unit: "sat", price: "17,60 €" },
-                { name: "Detekcija kvara", unit: "sat", price: "12,00 €" },
-                { name: "Dijagnostika", unit: "sat", price: "4,00 €" },
-                { name: "Krimpanje kabla", unit: "kom", price: "2,40 €" },
+                { name: "Informatički poslovi", unit: "sat", price: "38,00 €" },
+                { name: "Informatički poslovi + izlazak na teren", unit: "sat", price: "48,00 €" },
+                { name: "Instalacija periferije", unit: "sat", price: "22,00 €" },
+                { name: "Detekcija kvara", unit: "sat", price: "15,00 €" },
               ].map((item) => (
                 <div
                   key={item.name}
