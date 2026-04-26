@@ -222,6 +222,56 @@ function HomePage() {
         </div>
       </section>
 
+      {/* CJENIK */}
+      <section className="py-20">
+        <div className="nx-container">
+          <div className="text-center">
+            <p className="nx-section-label">Cjenik</p>
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
+              Informativni cjenik usluga
+            </h2>
+            <p className="text-muted-foreground max-w-xl mx-auto mb-12">
+              Transparentne cijene naših najčešćih usluga. Sve cijene uključuju PDV (25%).
+            </p>
+          </div>
+
+          <div className="max-w-3xl mx-auto nx-card p-0 overflow-hidden">
+            <div className="divide-y">
+              {[
+                { name: "Informatički poslovi", unit: "sat", price: "30,40 €" },
+                { name: "Informatički poslovi + izlazak na teren", unit: "sat", price: "38,40 €" },
+                { name: "Instalacija periferije", unit: "sat", price: "17,60 €" },
+                { name: "Detekcija kvara", unit: "sat", price: "12,00 €" },
+                { name: "Dijagnostika", unit: "sat", price: "4,00 €" },
+                { name: "Krimpanje kabla", unit: "kom", price: "2,40 €" },
+              ].map((item) => (
+                <div
+                  key={item.name}
+                  className="flex items-center justify-between gap-4 px-6 py-4"
+                >
+                  <div>
+                    <p className="font-semibold text-foreground">{item.name}</p>
+                    <p className="text-xs text-muted-foreground mt-0.5">
+                      po {item.unit}
+                    </p>
+                  </div>
+                  <span
+                    className="font-extrabold text-lg whitespace-nowrap"
+                    style={{ color: "var(--color-brand)" }}
+                  >
+                    {item.price}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <p className="text-xs text-muted-foreground text-center mt-6 max-w-xl mx-auto">
+            * Cijene su informativnog karaktera. Za točnu ponudu prilagođenu vašim potrebama, slobodno nas kontaktirajte.
+          </p>
+        </div>
+      </section>
+
       {/* CTA navigation grid */}
       <section className="py-20">
         <div className="nx-container">
