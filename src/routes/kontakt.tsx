@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -133,6 +133,26 @@ function KontaktPage() {
                       }
                     />
                   </div>
+                  <label className="flex items-start gap-2.5 text-sm leading-relaxed">
+                    <input
+                      type="checkbox"
+                      required
+                      className="mt-1 shrink-0 w-4 h-4 cursor-pointer"
+                      style={{ accentColor: "var(--color-brand)" }}
+                    />
+                    <span>
+                      Slažem se s{" "}
+                      <Link
+                        to="/politika-privatnosti"
+                        className="underline font-semibold"
+                        style={{ color: "var(--color-brand)" }}
+                      >
+                        Politikom privatnosti
+                      </Link>{" "}
+                      i obradom mojih osobnih podataka u svrhu odgovora na ovaj
+                      upit. <span style={{ color: "var(--color-brand)" }}>*</span>
+                    </span>
+                  </label>
                   <button type="submit" className="nx-btn nx-btn-brand w-full justify-center py-3.5">
                     <Send size={16} /> Pošalji upit
                   </button>
