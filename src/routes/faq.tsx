@@ -35,7 +35,7 @@ const faqs = [
   },
   {
     q: "Nudite li IT podršku za tvrtke?",
-    a: "Da, nudimo cjelovitu IT podršku za male i srednje tvrtke — od postavljanja mreže i serverske infrastrukture do redovnog održavanja i tehničke podrške zaposlenicima.",
+    a: "Da, nudimo cjelovitu IT podršku za male i srednje tvrtke — od postavljanja mreže i serverske infrastrukture do redovnog održavanja i tehničke podrške zaposlenicima. Opseg i model suradnje dogovaramo individualno, ovisno o situaciji i potrebama tvrtke.",
   },
   {
     q: "Koliko košta dijagnostika?",
