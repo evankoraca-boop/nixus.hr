@@ -9,15 +9,22 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as UvjetiKoristenjaRouteImport } from './routes/uvjeti-koristenja'
 import { Route as TimRouteImport } from './routes/tim'
 import { Route as SloziPcRouteImport } from './routes/slozi-pc'
 import { Route as RecenzijeRouteImport } from './routes/recenzije'
+import { Route as PolitikaPrivatnostiRouteImport } from './routes/politika-privatnosti'
 import { Route as KontaktRouteImport } from './routes/kontakt'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
+const UvjetiKoristenjaRoute = UvjetiKoristenjaRouteImport.update({
+  id: '/uvjeti-koristenja',
+  path: '/uvjeti-koristenja',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TimRoute = TimRouteImport.update({
   id: '/tim',
   path: '/tim',
@@ -31,6 +38,11 @@ const SloziPcRoute = SloziPcRouteImport.update({
 const RecenzijeRoute = RecenzijeRouteImport.update({
   id: '/recenzije',
   path: '/recenzije',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PolitikaPrivatnostiRoute = PolitikaPrivatnostiRouteImport.update({
+  id: '/politika-privatnosti',
+  path: '/politika-privatnosti',
   getParentRoute: () => rootRouteImport,
 } as any)
 const KontaktRoute = KontaktRouteImport.update({
@@ -64,9 +76,11 @@ export interface FileRoutesByFullPath {
   '/blog': typeof BlogRouteWithChildren
   '/faq': typeof FaqRoute
   '/kontakt': typeof KontaktRoute
+  '/politika-privatnosti': typeof PolitikaPrivatnostiRoute
   '/recenzije': typeof RecenzijeRoute
   '/slozi-pc': typeof SloziPcRoute
   '/tim': typeof TimRoute
+  '/uvjeti-koristenja': typeof UvjetiKoristenjaRoute
   '/blog/$slug': typeof BlogSlugRoute
 }
 export interface FileRoutesByTo {
@@ -74,9 +88,11 @@ export interface FileRoutesByTo {
   '/blog': typeof BlogRouteWithChildren
   '/faq': typeof FaqRoute
   '/kontakt': typeof KontaktRoute
+  '/politika-privatnosti': typeof PolitikaPrivatnostiRoute
   '/recenzije': typeof RecenzijeRoute
   '/slozi-pc': typeof SloziPcRoute
   '/tim': typeof TimRoute
+  '/uvjeti-koristenja': typeof UvjetiKoristenjaRoute
   '/blog/$slug': typeof BlogSlugRoute
 }
 export interface FileRoutesById {
@@ -85,9 +101,11 @@ export interface FileRoutesById {
   '/blog': typeof BlogRouteWithChildren
   '/faq': typeof FaqRoute
   '/kontakt': typeof KontaktRoute
+  '/politika-privatnosti': typeof PolitikaPrivatnostiRoute
   '/recenzije': typeof RecenzijeRoute
   '/slozi-pc': typeof SloziPcRoute
   '/tim': typeof TimRoute
+  '/uvjeti-koristenja': typeof UvjetiKoristenjaRoute
   '/blog/$slug': typeof BlogSlugRoute
 }
 export interface FileRouteTypes {
@@ -97,9 +115,11 @@ export interface FileRouteTypes {
     | '/blog'
     | '/faq'
     | '/kontakt'
+    | '/politika-privatnosti'
     | '/recenzije'
     | '/slozi-pc'
     | '/tim'
+    | '/uvjeti-koristenja'
     | '/blog/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -107,9 +127,11 @@ export interface FileRouteTypes {
     | '/blog'
     | '/faq'
     | '/kontakt'
+    | '/politika-privatnosti'
     | '/recenzije'
     | '/slozi-pc'
     | '/tim'
+    | '/uvjeti-koristenja'
     | '/blog/$slug'
   id:
     | '__root__'
@@ -117,9 +139,11 @@ export interface FileRouteTypes {
     | '/blog'
     | '/faq'
     | '/kontakt'
+    | '/politika-privatnosti'
     | '/recenzije'
     | '/slozi-pc'
     | '/tim'
+    | '/uvjeti-koristenja'
     | '/blog/$slug'
   fileRoutesById: FileRoutesById
 }
@@ -128,13 +152,22 @@ export interface RootRouteChildren {
   BlogRoute: typeof BlogRouteWithChildren
   FaqRoute: typeof FaqRoute
   KontaktRoute: typeof KontaktRoute
+  PolitikaPrivatnostiRoute: typeof PolitikaPrivatnostiRoute
   RecenzijeRoute: typeof RecenzijeRoute
   SloziPcRoute: typeof SloziPcRoute
   TimRoute: typeof TimRoute
+  UvjetiKoristenjaRoute: typeof UvjetiKoristenjaRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/uvjeti-koristenja': {
+      id: '/uvjeti-koristenja'
+      path: '/uvjeti-koristenja'
+      fullPath: '/uvjeti-koristenja'
+      preLoaderRoute: typeof UvjetiKoristenjaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/tim': {
       id: '/tim'
       path: '/tim'
@@ -154,6 +187,13 @@ declare module '@tanstack/react-router' {
       path: '/recenzije'
       fullPath: '/recenzije'
       preLoaderRoute: typeof RecenzijeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/politika-privatnosti': {
+      id: '/politika-privatnosti'
+      path: '/politika-privatnosti'
+      fullPath: '/politika-privatnosti'
+      preLoaderRoute: typeof PolitikaPrivatnostiRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/kontakt': {
@@ -209,9 +249,11 @@ const rootRouteChildren: RootRouteChildren = {
   BlogRoute: BlogRouteWithChildren,
   FaqRoute: FaqRoute,
   KontaktRoute: KontaktRoute,
+  PolitikaPrivatnostiRoute: PolitikaPrivatnostiRoute,
   RecenzijeRoute: RecenzijeRoute,
   SloziPcRoute: SloziPcRoute,
   TimRoute: TimRoute,
+  UvjetiKoristenjaRoute: UvjetiKoristenjaRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

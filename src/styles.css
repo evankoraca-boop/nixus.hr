@@ -144,4 +144,34 @@
     transition: color .2s, background .2s;
   }
   .nx-back-btn:hover { color: var(--color-brand); background: var(--color-brand-soft); }
+
+  /* Info box used inside legal pages */
+  .nx-info-box {
+    background: var(--color-brand-soft);
+    border-left: 3px solid var(--color-brand);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 16px 0 24px;
+    font-size: 0.95rem;
+  }
+  .nx-info-box p { margin: 0; }
+
+  /* Legal article typography (Politika privatnosti, Uvjeti korištenja) */
+  .nx-legal { color: var(--color-foreground); font-size: 1rem; line-height: 1.75; }
+  .nx-legal h2 {
+    font-size: 1.25rem; font-weight: 800;
+    margin-top: 36px; margin-bottom: 12px;
+    color: var(--color-foreground);
+  }
+  .nx-legal p { margin-bottom: 14px; color: var(--color-muted-foreground); }
+  .nx-legal ul { margin: 8px 0 18px 22px; padding: 0; color: var(--color-muted-foreground); }
+  .nx-legal li { margin-bottom: 8px; }
+  .nx-legal a { color: var(--color-brand); text-decoration: underline; }
+  .nx-legal a:hover { color: oklch(0.55 0.22 27); }
+  .nx-legal strong { color: var(--color-foreground); }
+  .nx-legal code {
+    background: var(--color-muted);
+    padding: 2px 6px; border-radius: 4px;
+    font-size: 0.85em;
+  }
 }
