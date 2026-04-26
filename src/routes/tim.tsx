@@ -33,7 +33,7 @@ const team = [
   {
     name: "Igor Omerbašić",
     role: "IT profesionalac",
-    bio: "Igor donosi tehničku preciznost i inovativna rješenja u svakom projektu. Stručnjak za mrežnu infrastrukturu i servis računala.",
+    bio: "Igor donosi tehničku preciznost i inovativna rješenja u svakom projektu. Stručnjak za računala i servis računala.",
     g: "male" as const,
   },
   {
