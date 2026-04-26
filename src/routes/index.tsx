@@ -13,7 +13,7 @@ import {
   MessageSquare,
   ArrowRight,
 } from "lucide-react";
-import heroPc from "@/assets/hero-pc.png";
+import heroPc from "@/assets/hero-new.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
