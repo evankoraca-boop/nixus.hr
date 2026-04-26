@@ -11,7 +11,6 @@ import {
   Server,
   HardDrive,
   MessageSquare,
-  ShieldCheck,
   ArrowRight,
 } from "lucide-react";
 import heroPc from "@/assets/hero-pc.png";
