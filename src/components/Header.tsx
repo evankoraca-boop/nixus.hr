@@ -3,13 +3,13 @@ import { useEffect, useState } from "react";
 import { Logo } from "./Logo";
 import { Menu, X } from "lucide-react";
 
-const navItems = [
+const navItems: { to: "/" | "/tim" | "/recenzije" | "/faq" | "/blog"; label: string; exact?: boolean }[] = [
   { to: "/", label: "Početna", exact: true },
   { to: "/tim", label: "Tim" },
   { to: "/recenzije", label: "Recenzije" },
   { to: "/faq", label: "FAQ" },
   { to: "/blog", label: "Blog" },
-] as const;
+];
 
 export function Header() {
   const [open, setOpen] = useState(false);
