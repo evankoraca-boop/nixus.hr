@@ -55,7 +55,7 @@ function HomePage() {
       {/* HERO */}
       <section className="pt-28 md:pt-36 pb-20 md:pb-28">
         <div className="nx-container">
-          <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+          <div className="grid md:grid-cols-2 gap-4 md:gap-6 items-center">
             <div>
               <span
                 className="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-full"
@@ -84,13 +84,13 @@ function HomePage() {
               </div>
             </div>
 
-            <div className="relative">
+            <div className="relative -ml-2 md:-ml-8">
               <img
                 src={heroPc}
-                alt="Gaming PC po mjeri"
-                width={1024}
-                height={1024}
-                className="w-full rounded-3xl object-cover aspect-square"
+                alt="NIXUS X"
+                width={1280}
+                height={960}
+                className="w-full rounded-3xl object-cover aspect-square scale-110 md:scale-125 origin-left"
               />
               <div
                 className="absolute -bottom-5 left-5 md:left-8 flex items-center gap-3 bg-card rounded-2xl py-3 px-5 shadow-xl"
