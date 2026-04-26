@@ -39,7 +39,7 @@ const faqs = [
   },
   {
     q: "Koliko košta dijagnostika?",
-    a: "Ako popravite računalo kod nas, cijena dijagnostike se uračunava u ukupnu cijenu popravka — ne plaćate je posebno. Ako se odlučite ne popraviti računalo, dijagnostika se naplaćuje od 20 eura.",
+    a: "Ako popravite računalo kod nas, cijena dijagnostike se uračunava u ukupnu cijenu popravka — ne plaćate je posebno. Ako se odlučite ne popraviti računalo, dijagnostika se naplaćuje od 15 eura.",
   },
 ];
 
