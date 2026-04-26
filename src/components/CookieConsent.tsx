@@ -11,6 +11,47 @@ type Consent = {
   setAt: string;
 };
 
+declare global {
+  interface Window {
+    dataLayer: unknown[];
+    gtag: (...args: unknown[]) => void;
+  }
+}
+
+/**
+ * Initialize Google Consent Mode v2 with all non-essential storage DENIED by default.
+ * MUST run before any GA/Ads tag fires. Safe to call multiple times.
+ */
+function initConsentMode() {
+  if (typeof window === "undefined") return;
+  window.dataLayer = window.dataLayer || [];
+  if (!window.gtag) {
+    window.gtag = function gtag(...args: unknown[]) {
+      window.dataLayer.push(args);
+    };
+  }
+  window.gtag("consent", "default", {
+    ad_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied",
+    analytics_storage: "denied",
+    functionality_storage: "granted",
+    security_storage: "granted",
+    wait_for_update: 500,
+  });
+}
+
+/** Push the current consent state to GTM/GA via Consent Mode v2. */
+function updateConsentMode(consent: { analytics: boolean; marketing: boolean }) {
+  if (typeof window === "undefined" || !window.gtag) return;
+  window.gtag("consent", "update", {
+    analytics_storage: consent.analytics ? "granted" : "denied",
+    ad_storage: consent.marketing ? "granted" : "denied",
+    ad_user_data: consent.marketing ? "granted" : "denied",
+    ad_personalization: consent.marketing ? "granted" : "denied",
+  });
+}
+
 function readConsent(): Consent | null {
   if (typeof window === "undefined") return null;
   try {
@@ -32,12 +73,26 @@ function writeConsent(c: Omit<Consent, "necessary" | "setAt">) {
     setAt: new Date().toISOString(),
   };
   window.localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
+  updateConsentMode(c);
   window.dispatchEvent(new CustomEvent("nixus:consent-change", { detail: payload }));
 }
 
 /** Public helper so the footer link can re-open the modal. */
 export function openCookieSettings() {
   window.dispatchEvent(new Event("nixus:open-cookie-settings"));
+}
+
+/**
+ * Public helper for conditional script loading.
+ * Use to guard GA / Pixel / other tracking scripts so they only load AFTER consent.
+ *
+ * Example:
+ *   if (hasConsent("analytics")) loadGoogleAnalytics();
+ *   window.addEventListener("nixus:consent-change", () => { ... });
+ */
+export function hasConsent(category: "analytics" | "marketing"): boolean {
+  const c = readConsent();
+  return !!c && !!c[category];
 }
 
 export function CookieConsent() {
