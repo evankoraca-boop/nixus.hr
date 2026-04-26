@@ -88,8 +88,8 @@ function HomePage() {
                 src={heroPc}
                 alt="NIXUS X"
                 width={1280}
-                height={960}
-                className="w-full rounded-3xl object-cover aspect-square scale-110 md:scale-125 origin-left"
+                height={1280}
+                className="w-full object-contain aspect-square scale-125 md:scale-[1.4] origin-left"
               />
             </div>
           </div>
