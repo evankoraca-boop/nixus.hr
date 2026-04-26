@@ -102,12 +102,20 @@ export function CookieConsent() {
   const [marketing, setMarketing] = useState(false);
 
   useEffect(() => {
+    // Always set defaults FIRST (denied) — Google Consent Mode v2 requirement.
+    initConsentMode();
+
     const existing = readConsent();
     if (!existing) {
       setBannerOpen(true);
     } else {
       setAnalytics(existing.analytics);
       setMarketing(existing.marketing);
+      // Re-apply previously stored consent on every page load.
+      updateConsentMode({
+        analytics: existing.analytics,
+        marketing: existing.marketing,
+      });
     }
     const open = () => {
       const cur = readConsent();
