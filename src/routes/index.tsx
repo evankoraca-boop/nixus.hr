@@ -14,7 +14,7 @@ import {
   ShieldCheck,
   ArrowRight,
 } from "lucide-react";
-import heroPc from "@/assets/hero-pc.jpg";
+import heroPc from "@/assets/hero-pc.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
