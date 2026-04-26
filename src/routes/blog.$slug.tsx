@@ -108,7 +108,7 @@ function BlogPostPage() {
           {post.title}
         </h1>
         <div className="space-y-5 text-[15px] leading-relaxed text-muted-foreground">
-          {post.paragraphs.map((p, i) => (
+          {post.paragraphs.map((p: string, i: number) => (
             <p key={i}>{p}</p>
           ))}
         </div>
