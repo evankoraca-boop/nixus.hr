@@ -148,10 +148,7 @@ function HomePage() {
                 className="bg-card rounded-2xl p-6 border"
                 style={{ borderTop: "3px solid var(--color-brand)" }}
               >
-                <strong
-                  className="block text-3xl font-extrabold mb-1"
-                  style={{ color: "var(--color-brand)" }}
-                >
+                <strong className="block text-3xl font-extrabold mb-1 text-foreground">
                   {n}
                 </strong>
                 <span className="text-sm text-muted-foreground">{l}</span>
