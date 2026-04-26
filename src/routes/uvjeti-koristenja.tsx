@@ -34,7 +34,7 @@ function UvjetiKoristenjaPage() {
           <br />
           Olge Ban 3, 52470 Umag, Republika Hrvatska
           <br />
-          OIB: 00000000000
+          OIB: 48424010900 · MB: 02008793
           <br />
           Email: <a href="mailto:info@nixus.hr">info@nixus.hr</a>
         </p>
