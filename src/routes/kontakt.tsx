@@ -29,7 +29,7 @@ const info = [
   { icon: MapPin, label: "Adresa", value: "Olge Ban 3, 52470 Umag" },
   { icon: Phone, label: "Telefon", value: "+385 99 123 4567" },
   { icon: Mail, label: "Email", value: "info@nixus.hr" },
-  { icon: Clock, label: "Radno vrijeme", value: "Pon – Pet: 8:00 – 17:00" },
+  { icon: Clock, label: "Radno vrijeme", value: "Pon/Sri/Pet 07:30–15h • Uto/Čet 08–20h • Sub 08–13h (1. i 3.)" },
 ];
 
 function KontaktPage() {
