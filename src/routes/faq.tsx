@@ -41,6 +41,10 @@ const faqs = [
     q: "Koliko košta dijagnostika?",
     a: "Ako popravite računalo kod nas, cijena dijagnostike se uračunava u ukupnu cijenu popravka — ne plaćate je posebno. Ako se odlučite ne popraviti računalo, dijagnostika se naplaćuje od 15 eura.",
   },
+  {
+    q: "Što ako usluga koju trebam nije navedena u cjeniku?",
+    a: "Nema problema — cjenik prikazuje najčešće usluge, ali nudimo i mnoge druge. Za sve usluge koje nisu navedene cijena se dogovara individualno, ovisno o opsegu i složenosti posla. Slobodno nas kontaktirajte za ponudu.",
+  },
 ];
 
 function FaqPage() {
