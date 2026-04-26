@@ -1,6 +1,6 @@
 import logoImg from "@/assets/nixus-logo.png";
 
-export function Logo({ className = "", height = 40 }: { className?: string; height?: number }) {
+export function Logo({ className = "", height = 56 }: { className?: string; height?: number }) {
   return (
     <img
       src={logoImg}
