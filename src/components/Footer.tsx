@@ -128,7 +128,7 @@ export function Footer() {
           </nav>
           <div className="flex flex-col sm:flex-row gap-2 sm:justify-between">
             <p>© {new Date().getFullYear()} NIXUS d.o.o. Sva prava pridržana.</p>
-            <p>Olge Ban 3, 52470 Umag · OIB: 00000000000</p>
+            <p>Olge Ban 3, 52470 Umag · OIB: 48424010900 · MB: 02008793</p>
           </div>
         </div>
       </div>
