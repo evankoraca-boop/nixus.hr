@@ -27,7 +27,7 @@ export const Route = createFileRoute("/faq")({
 const faqs = [
   {
     q: "Koliko traje popravak računala?",
-    a: "Većina popravaka završi u roku od 1–3 radna dana, ovisno o složenosti problema i dostupnosti dijelova. Za hitne slučajeve nastojimo riješiti problem isti dan.",
+    a: "Većina popravaka završi u roku od 1–3 radna dana, ovisno o složenosti problema i dostupnosti dijelova. U pojedinim slučajevima popravak može trajati i duže — primjerice kod naručivanja specifičnih dijelova, složenijih kvarova ili dodatne dijagnostike. Za hitne slučajeve nastojimo riješiti problem isti dan.",
   },
   {
     q: "Dolazite li na adresu klijenta?",
