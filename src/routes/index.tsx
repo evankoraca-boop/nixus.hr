@@ -83,7 +83,7 @@ function HomePage() {
               </div>
             </div>
 
-            <div className="relative -ml-2 md:-ml-8">
+            <div className="relative -ml-2 md:-ml-8 hidden md:block">
               <img
                 src={heroPc}
                 alt="NIXUS X"
